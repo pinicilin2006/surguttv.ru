@@ -1031,33 +1031,6 @@
          .simple_overlay_p { display:none; z-index:10000; position:absolute; background-color:#fff; width:675px; min-height:200px; max-height:400px; border:1px solid #666; padding:10px; -moz-box-shadow:0 0 90px 5px #000; -webkit-box-shadow: 0 0 90px #000; } .overlay_block{overflow:auto; } .simple_overlay_p .close { background-image:url(http://lpgenerator.ru/media/css/upgrade/widget/popup/close.png); position:absolute; z-index:10001; right:-15px; top:-15px; cursor:pointer; height:25px; width:25px; }
          #block-new20 a:hover { text-decoration:none; }
       </style>
-      <script>
-         jq_181(function($){
-         var text_block = '#block-new83'; /* Блок с текстом */
-         var button = '#block-new20 a'; /* кнопка вызова */
-         $('body').append('<div class="simple_overlay_p" id="overlay1"></div>');
-         $('#overlay1').html('<div class="overlay_block">' + $(text_block).html() + '</div>');
-         $(text_block).hide();
-         $('#overlay1').overlay({ top: '10%', mask: { color:'#000', opacity:.5 } });
-         $('.overlay_block, .simple_overlay_p').css({ 'max-height': $(window).height() * 0.7 + 'px'});
-         $(button).click(function(e){
-         e.preventDefault();
-         $('#overlay1').overlay().load();
-         
-         });
-         });
-      </script> <script>
-         jq_144(function($){
-          $('#block-new44 a').click(function(e){
-           e.preventDefault();
-           $('html, body').animate({ scrollTop: 270 }, 500);
-          });
-         $('#block-new82 a').click(function(e){
-           e.preventDefault();
-           $('html, body').animate({ scrollTop: 270 }, 500);
-          });
-         })
-      </script> 
 
       <script>
          jq_144(function($) {
@@ -1175,51 +1148,33 @@
          // заменить #block-newID на ID элемента, к которому идет прокрутка
          });
       </script>
+      <!-- Yandex.Metrika counter -->
       <script type="text/javascript">
-         //<![CDATA[
-         (function () {
-             function setcookie(name, value, expires, path, domain, secure) {
-                 expires instanceof Date ? expires = expires.toGMTString() : typeof(expires) == 'number' && (expires = (new Date(+(new Date) + expires * 1e3)).toGMTString());
-                 var r = [name + "=" + encodeURIComponent(value)], s, i;
-                 for (i in s = {expires: expires, path: path, domain: domain}) {
-                     s[i] && r.push(i + "=" + s[i]);
-                 }
-                 return secure && r.push("secure"), document.cookie = r.join(";"), true;
-             }
-             var v_id = '837199';
-             // Utm params
-             var query = getQueryParams(document.location.search);
-             var utm_params = ['utm_medium', 'utm_campaign', 'utm_term', 'utm_source', 'ch'];
-         
-             for (var i in utm_params) {
-                 if (query.hasOwnProperty(utm_params[i])) {
-                     setcookie(utm_params[i] + "_" + v_id, query[utm_params[i]], 86400, '/');
-                 }
-             }
-         
-             // Meta info
-             var meta_info = {
-                 HTTP_USER_AGENT: navigator.userAgent,
-                 HTTP_REFERER: document.referrer,
-                 LANGUAGE: window.navigator.userLanguage || window.navigator.language,
-                 URL_PATH: document.location.search
-             };
-         
-             for (var k in meta_info) {
-                 setcookie(k, meta_info[k], 2592000, '/');
-             }
-         })();
-         //]]>
+      (function (d, w, c) {
+          (w[c] = w[c] || []).push(function() {
+              try {
+                  w.yaCounter30655102 = new Ya.Metrika({id:30655102,
+                          webvisor:true,
+                          clickmap:true,
+                          trackLinks:true,
+                          accurateTrackBounce:true});
+              } catch(e) { }
+          });
+
+          var n = d.getElementsByTagName("script")[0],
+              s = d.createElement("script"),
+              f = function () { n.parentNode.insertBefore(s, n); };
+          s.type = "text/javascript";
+          s.async = true;
+          s.src = (d.location.protocol == "https:" ? "https:" : "http:") + "//mc.yandex.ru/metrika/watch.js";
+
+          if (w.opera == "[object Opera]") {
+              d.addEventListener("DOMContentLoaded", f, false);
+          } else { f(); }
+      })(document, window, "yandex_metrika_callbacks");
       </script>
-      <script type="text/javascript">
-         jq_144('input.date').each(function() {
-             jq_144(this).datepicker({dateFormat: 'dd.mm.yy'});
-         });
-         jq_144('input[data-mask]').each(function() {
-             jq_144.mask.definitions['a']='[а-яА-Яa-zA-Z]';
-             jq_144.mask.definitions['*']='[а-яА-Яa-zA-Z0-9]';
-             jq_144(this).mask(jq_144(this).attr('data-mask'));
-         });
-      </script>
+      <noscript><div><img src="//mc.yandex.ru/watch/30655102" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+      <!-- /Yandex.Metrika counter -->
+
    </body>
 </html>
